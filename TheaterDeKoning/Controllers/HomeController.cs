@@ -18,12 +18,16 @@ namespace TheaterDeKoning.Controllers
             _logger = logger;
         }
 
+        public IActionResult ShowAll()
+        {
+            return View();
+        } 
+
         public IActionResult Index()
         {
             return View();
         }
-
-        public IActionResult Privacy()
+            public IActionResult Privacy()
         {
             return View();
         }
