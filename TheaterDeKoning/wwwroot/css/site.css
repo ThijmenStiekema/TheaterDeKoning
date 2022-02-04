@@ -1,3 +1,22 @@
 ﻿header {
     background-color:mediumaquamarine;
 }
+
+.content {
+    display: flex;
+    background-color: #231F20;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #A5060B;
+}
+
+.links{
+    width: 10vw;
+}
+
+.rechts {
+    width: 10vw;
+}
+
+p {
+    color: #969696,
+}
