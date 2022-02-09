@@ -1,12 +1,16 @@
 ﻿header {
-    background-color: #A5060B;
+    background-color: #A5060B; /* rood*/
     height: 5vh;
+}
+
+.button {
+    background-color: #A5060B; /* rood*/
 }
 
 .content {
     margin: 0;
     display: flex;
-    background-color: #231F20;
+    background-color: #231F20; /* Grijs*/
     font-family: Arial, Helvetica, sans-serif;
     color: #A5060B;
 }
@@ -34,5 +38,5 @@ p {
 }
 
 footer {
-    background-color: #A5060B;
+    background-color: #A5060B; 
 }
