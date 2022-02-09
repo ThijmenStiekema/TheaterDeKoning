@@ -1,5 +1,5 @@
 ﻿header {
-    background-color:mediumaquamarine;
+    background-color: #A5060B;
 }
 
 .content {
@@ -18,5 +18,9 @@
 }
 
 p {
-    color: #969696,
+    color: #969696;
+}
+
+footer {
+    background-color: #A5060B;
 }
