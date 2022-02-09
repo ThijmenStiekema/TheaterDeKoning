@@ -1,20 +1,32 @@
 ﻿header {
-    background-color:mediumaquamarine;
+    background-color: #A5060B;
+    height: 5vh;
 }
 
 .content {
+    margin: 0;
     display: flex;
     background-color: #231F20;
     font-family: Arial, Helvetica, sans-serif;
     color: #A5060B;
 }
 
-.links{
-    width: 10vw;
+body{
+    margin: 0;
 }
 
-.rechts {
-    width: 10vw;
+.L {
+    width: 12.5vw;
+    padding: 0;
+}
+
+.article{
+    min-height: 100em;
+    width: 75vw;
+}
+
+.R {
+    width: 12.5vw;
 }
 
 p {
