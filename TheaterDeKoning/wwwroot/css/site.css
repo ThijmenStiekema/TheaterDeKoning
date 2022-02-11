@@ -7,6 +7,12 @@
     background-color: #A5060B; /* rood*/
 }
 
+img {
+    max-width: 5%;
+    height: auto;
+    display: block;
+    margin-left: 200px;
+}
 .content {
     margin: 0;
     display: flex;
@@ -17,7 +23,6 @@
 
 body{
     margin: 0;
-    text-align: center;
 }
 
 .L {
