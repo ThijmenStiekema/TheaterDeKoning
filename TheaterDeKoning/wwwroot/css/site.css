@@ -1,10 +1,29 @@
 ﻿header {
     background-color: #A5060B; /* rood*/
-    height: 5vh;
+    min-height: 2em;
+    height: 7.5vh;
+    display: flex;
 }
 
-.button {
+nav {
+    display: flex;
+    align-content: flex-start;
+}
+
+button {
     background-color: #A5060B; /* rood*/
+    border: none;
+    color: white;
+    text-align: center;
+    min-height: 2em/1.25em;
+    height: 7.5vh;
+    font-size: 1.25em;
+    padding: 5px;
+}
+h1 {
+    padding: 0;
+    margin-top: 0; 
+    color: #D2C1B0; /*beige*/
 }
 
 .content {
