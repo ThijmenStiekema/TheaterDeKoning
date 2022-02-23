@@ -18,7 +18,8 @@ namespace TheaterDeKoning.Controllers
             _logger = logger;
         }
 
-        public IActionResult ShowAll()
+        [Route("COntact")]
+        public IActionResult Contact()
         {
             return View();
         } 
@@ -27,6 +28,8 @@ namespace TheaterDeKoning.Controllers
         {
             return View();
         }
+
+        [Route("Privacy")]
             public IActionResult Privacy()
         {
             return View();
