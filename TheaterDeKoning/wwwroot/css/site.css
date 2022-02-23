@@ -26,11 +26,16 @@ h1 {
     color: #D2C1B0; /*beige*/
 }
 
+h2{
+    font-size: 200%; 
+}
+
 img {
-    max-width: 5%;
+    max-width: 100%;
     height: auto;
     display: block;
-    margin-left: 200px;
+    margin-left: 500px;
+    float: right;
 }
 .content {
     margin: 0;
@@ -40,6 +45,16 @@ img {
     color: #A5060B;
 }
 
+.row {
+    content: "";
+    clear: both;
+    display: table;
+}
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+}
 body{
     margin: 0;
 }
