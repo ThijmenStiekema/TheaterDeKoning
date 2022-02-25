@@ -8,15 +8,16 @@
     align-items: center;
 }
 
-img {
-    max-width: 5%;
-    height: auto;
-    display: block;
+.LogoHoek {
+    height: inherit;
+    margin: 0;
+    object-fit: contain;
 }
 
 h1 {
-    text-align: center ;
+    text-align: center;
     margin: 0;
+    margin-left: 5px;
     color: #D2C1B0; /*beige*/
     align-content: center;
 }
@@ -35,17 +36,34 @@ a {
     text-decoration: none;
 }
 
+a:active {
+    text-shadow: 2px 2px #ffffff;
+}
+
+.icon {
+    display: none;
+}
+
 h2{
     font-size: 200%; 
 }
 
-img {
+.LionKing{
     max-width: 100%;
     height: auto;
     display: block;
     margin-left: 500px;
     float: right;
 }
+
+.Titanic {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-left: 500px;
+    float: right;
+}
+
 .content {
     margin: 0;
     display: flex;

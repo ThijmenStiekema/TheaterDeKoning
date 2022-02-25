@@ -8,7 +8,7 @@
 </head>
 <body>
     <header>
-        <img src="/Images/Logo.png" />
+        <img class ="LogoHoek" src="/Images/Logo.png" />
         <h1>THEATER DE KONING</h1>
         <nav>
             <a href="\">
@@ -27,11 +27,16 @@
             </a>
 
             <a href="Theater-huren">
-                THeater huren
+                Theater huren
             </a>
 
             <a href="Vacatures">
                 Vacatures
+            </a>
+
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+
             </a>
         </nav>
 
@@ -54,3 +59,14 @@
     </footer>
 </body>
 </html>
+
+<script>
+    function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
+        }
+    }
+</script>
