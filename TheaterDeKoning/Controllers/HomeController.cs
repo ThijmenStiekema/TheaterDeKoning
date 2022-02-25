@@ -18,10 +18,19 @@ namespace TheaterDeKoning.Controllers
             _logger = logger;
         }
 
-        [Route("COntact")]
+        [Route("Contact")]
+
         public IActionResult Contact()
         {
             return View();
+        }
+
+        [HttpPost]
+        public IActionResult Contact(Person person)
+        {
+            ViewData["fisrtName"] = person.FirstName;
+            ViewData["lastName"] = person.LastName;
+            return View(person);
         } 
 
         public IActionResult Index()
