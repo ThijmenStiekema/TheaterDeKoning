@@ -1,10 +1,15 @@
-﻿@{
+﻿@model SendandStore.Models.Person
+@{
     ViewData["Title"] = "Contact";
 }
 <h1>@ViewData["Title"]</h1>
 
-<div class="text-center">
-    <p>Hier komt contact info</p>
-</div>
-
-<p></p>
+<form method="post">
+    <div>Voornaam: <input type="text" name="firstname" /></div>
+    <div>Achternaam: <input type="text" name="lastname" /></div>
+    <div>Email: <input type="text" name="email" /></div>
+    <div>Telefoon: <input type="text" name="phone" /></div>
+    <div>Adres: <input type="text" name="adress" /></div>
+    <div>Beschrijving: <input type="text" name="adress" /></div>
+    <input type="submit" value="verstuur" />
+</form>
