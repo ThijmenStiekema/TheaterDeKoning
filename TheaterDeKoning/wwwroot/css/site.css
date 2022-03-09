@@ -1,17 +1,9 @@
-﻿header {
-    background-color: #A5060B; /* rood*/
-    min-height: 2em;
-    height: 7.5vh;
-    display: flex;
-    align-content: center;
-    text-align: center;
-    align-items: center;
-}
-
+﻿
 .LogoHoek {
     height: inherit;
     margin: 0;
     object-fit: contain;
+    align-self: left;
 }
 
 h1 {
@@ -19,14 +11,19 @@ h1 {
     margin: 0;
     margin-left: 5px;
     color: #D2C1B0; /*beige*/
-    align-content: center;
 }
-
-nav {
-    display: flex;
-    align-content: center;
+.topnav {
+    padding: 0;
+    flex-direction: row;
     margin-left: 5px;
     font-family: font-family: Arial, Helvetica, sans-serif;
+    background-color: #A5060B; /* rood*/
+    min-height: 5vh;
+    height: 4em;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    overflow: hidden;
 }
 
 a {
@@ -42,6 +39,40 @@ a:active {
 
 .icon {
     display: none;
+}
+
+@media screen and (max-width: 1000px) {
+    .topnav a:not(:first-child) {
+        display: none;
+    }
+
+    .topnav a.icon {
+        float: right;
+        display: block;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .topnav.responsive {
+        position: relative;
+        flex-direction: column;
+    }
+
+    .topnav.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 3em;
+       
+    }
+
+    .topnav.responsive a {
+        padding-top: min(5vh, 4em);
+        padding-top: 4em;
+        float: none;
+        display: block;
+        text-align: left;
+    }
 }
 
 h2{
