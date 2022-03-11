@@ -14,25 +14,32 @@ namespace TheaterDeKoning.Controllers
     {
         private readonly ILogger<HomeController> _logger;
 
+       
+
         public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
         }
 
-        [Route("Contact")]
 
+        [Route("Contact")]
         public IActionResult Contact()
         {
             return View();
         }
 
+
         [HttpPost]
+        [Route("Contact")]
         public IActionResult Contact(Person person)
         {
-            ViewData["fisrtName"] = person.FirstName;
-            ViewData["lastName"] = person.LastName;
+            ViewData["firstName"] = person.FirstName;
+            ViewData["lastName"] = person.Lastname;
+            if (ModelState.IsValid)
+                return Redirect("/succes");
+
             return View(person);
-        } 
+        }
 
         public IActionResult Index()
         {
