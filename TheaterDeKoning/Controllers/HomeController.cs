@@ -1,11 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using SendandStore.Models;
-using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
 using TheaterDeKoning.Models;
 
 namespace TheaterDeKoning.Controllers
@@ -48,6 +43,18 @@ namespace TheaterDeKoning.Controllers
 
         [Route("Privacy")]
             public IActionResult Privacy()
+        {
+            return View();
+        }
+
+        [Route("FAQ")]
+        public IActionResult FAQ()
+        {
+            return View();
+        }
+
+        [Route("Vacatures")]
+        public IActionResult Vacatures()
         {
             return View();
         }
