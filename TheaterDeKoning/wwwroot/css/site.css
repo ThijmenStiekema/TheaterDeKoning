@@ -1,9 +1,41 @@
-﻿
+﻿.topnav a {
+    color: #D2C1B0; /*beige*/
+    font-size: larger;
+    padding: 10px;
+    text-decoration: none;
+    min-height: 5vh;
+    height: 4em;
+}
+
+.topnav a:active {
+    text-shadow: 2px 2px #ffffff;
+}
+
+.topnav {
+    display: flex;
+    padding: 0;
+    flex-direction: row;
+    font-family: "Times New Roman", Times, serif;
+    background-color: #A5060B; /* rood*/
+    height: fit-content;
+    text-align: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.Topleft {
+    display: flex;
+    min-height: 5vh;
+    height: 4em;
+}
+
 .LogoHoek {
     height: inherit;
     margin: 0;
     object-fit: contain;
-    align-self: left;
+    min-height: 5vh;
+    height: 4em;
+    float: left;
 }
 
 h1 {
@@ -11,30 +43,7 @@ h1 {
     margin: 0;
     margin-left: 5px;
     color: #D2C1B0; /*beige*/
-}
-.topnav {
-    padding: 0;
-    flex-direction: row;
-    margin-left: 5px;
-    font-family: font-family: Arial, Helvetica, sans-serif;
-    background-color: #A5060B; /* rood*/
-    min-height: 5vh;
-    height: 4em;
-    display: flex;
-    text-align: center;
-    align-items: center;
-    overflow: hidden;
-}
-
-a {
-    color: #D2C1B0; /*beige*/
-    font-size: larger;
-    padding: 10px;
-    text-decoration: none;
-}
-
-a:active {
-    text-shadow: 2px 2px #ffffff;
+    float: left;
 }
 
 .icon {
@@ -42,36 +51,32 @@ a:active {
 }
 
 @media screen and (max-width: 1000px) {
-    .topnav a:not(:first-child) {
+    .topnav a {
         display: none;
     }
 
     .topnav a.icon {
-        float: right;
         display: block;
     }
-}
 
-@media screen and (max-width: 1000px) {
     .topnav.responsive {
-        position: relative;
         flex-direction: column;
     }
 
-    .topnav.responsive .icon {
-        position: absolute;
-        right: 0;
-        top: 0;
-        height: 3em;
-       
+    .topnav.responsive h1{
+
     }
 
-    .topnav.responsive a {
-        padding-top: min(5vh, 4em);
-        padding-top: 4em;
-        float: none;
+    .topnav.responsive .Topleft{
         display: block;
-        text-align: left;
+        float: left;
+    }
+
+    .topnav.responsive .icon {
+        align-self: flex-end;
+    }
+    .topnav.responsive a {
+       display: flex; 
     }
 }
 
