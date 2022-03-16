@@ -11,18 +11,6 @@
     text-shadow: 2px 2px #ffffff;
 }
 
-.topnav {
-    display: flex;
-    padding: 0;
-    flex-direction: row;
-    font-family: "Times New Roman", Times, serif;
-    background-color: #A5060B; /* rood*/
-    height: fit-content;
-    text-align: center;
-    align-items: center;
-    overflow: hidden;
-}
-
 .Topleft {
     display: flex;
     min-height: 5vh;
@@ -64,8 +52,12 @@ h1 {
     }
 
     .topnav.responsive h1{
-
     }
+  
+    .topnav.responsive.icon {
+            flex-direction: row-reverse;
+            display: block;
+        }
 
     .topnav.responsive .Topleft{
         display: block;
@@ -78,6 +70,8 @@ h1 {
     .topnav.responsive a {
        display: flex; 
     }
+
+  
 }
 
 h2{
