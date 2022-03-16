@@ -13,10 +13,11 @@
     flex-direction: row;
     font-family: "Times New Roman", Times, serif;
     background-color: #A5060B; /* rood*/
-    height: fit-content;
-    text-align: center;
-    align-items: center;
+    align-content: center;
     overflow: hidden;
+    min-height: 5vh;
+    height: 4em;
+
 }
 
 .topnav a:active {
@@ -25,6 +26,8 @@
 
 .Topleft {
     display: flex;
+    min-height: 5vh;
+    height: 4em;
     min-height: 5vh;
     height: 4em;
 }
@@ -38,12 +41,14 @@
     float: left;
 }
 
-h1 {
+.topnav h1 {
     text-align: center;
     margin: 0;
     margin-left: 5px;
     color: #D2C1B0; /*beige*/
     float: left;
+    min-height: 5vh;
+    height: 4em;
 }
 
 .icon {
@@ -61,6 +66,7 @@ h1 {
 
     .topnav.responsive {
         flex-direction: column;
+        height: fit-content;
     }
 
     .topnav.responsive h1{
@@ -82,8 +88,6 @@ h1 {
     .topnav.responsive a {
        display: flex; 
     }
-
-  
 }
 
 h2{
