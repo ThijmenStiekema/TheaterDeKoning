@@ -18,8 +18,6 @@
     @Html.ValidationMessageFor(m => m.Adress)
     <div>Description: <input type="text" name="adress" /></div>
     @Html.ValidationMessageFor(m => m.Description)
+
     <input type="submit" value="verstuur" />
 </form>
-@if (Model != null){
-<p>Hallo @ViewData["firstName"] die achternaam @ViewData["lastName"] heeft</p>
-}

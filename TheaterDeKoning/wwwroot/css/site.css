@@ -1,8 +1,29 @@
-﻿
+﻿.topnav a {
+    color: #D2C1B0; /*beige*/
+    font-size: larger;
+    padding: 10px;
+    text-decoration: none;
+    min-height: 5vh;
+    height: 4em;
+}
+
+.topnav a:active {
+    text-shadow: 2px 2px #ffffff;
+}
+
+.Topleft {
+    display: flex;
+    min-height: 5vh;
+    height: 4em;
+}
+
 .LogoHoek {
     height: inherit;
     margin: 0;
     object-fit: contain;
+    min-height: 5vh;
+    height: 4em;
+    float: left;
 }
 
 h1 {
@@ -10,17 +31,7 @@ h1 {
     margin: 0;
     margin-left: 5px;
     color: #D2C1B0; /*beige*/
-}
-
-a {
-    color: #D2C1B0; /*beige*/
-    font-size: larger;
-    padding: 10px;
-    text-decoration: none;
-}
-
-a:active {
-    text-shadow: 2px 2px #ffffff;
+    float: left;
 }
 
 .icon {
@@ -28,53 +39,36 @@ a:active {
 }
 
 @media screen and (max-width: 1000px) {
-    .topnav a:not(:first-child) {
+    .topnav a {
         display: none;
     }
 
     .topnav a.icon {
-        float: right;
         display: block;
     }
-    .topnav {
-        padding: 0;
-        flex-direction: row;
-        font-family: font-family: Arial, Helvetica, sans-serif;
-        background-color: #A5060B; /* rood*/
-        min-height: 5vh;
-        height: 4em;
-        display: flex;
-        text-align: center;
-        align-items: center;
-        overflow: hidden;
-    }
-}
 
-@media screen and (max-width: 1000px) {
     .topnav.responsive {
-        padding: 0;
-        flex-direction: unset;
-        font-family: font-family: Arial, Helvetica, sans-serif;
-        background-color: #A5060B; /* rood*/
-        display: flex;
-        overflow: hidden;
+        flex-direction: column;
     }
-    .LogoHoek.responsive {
-        margin: 0;
-        object-fit: contain;
-        flex-direction: row;
-        min-height: 5vh;
-        height: 4em;
+
+    .topnav.responsive h1{
     }
+  
     .topnav.responsive.icon {
             flex-direction: row-reverse;
             display: block;
         }
 
-    .topnav.responsive a {
-        float: none;
+    .topnav.responsive .Topleft{
         display: block;
-        text-align: left;
+        float: left;
+    }
+
+    .topnav.responsive .icon {
+        align-self: flex-end;
+    }
+    .topnav.responsive a {
+       display: flex; 
     }
 
   
