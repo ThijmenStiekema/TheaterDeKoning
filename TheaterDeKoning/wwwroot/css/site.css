@@ -17,6 +17,7 @@
     overflow: hidden;
     min-height: 5vh;
     height: 4em;
+
 }
 
 .topnav a:active {
@@ -115,6 +116,7 @@ h2{
     background-color: #231F20; /* Grijs*/
     font-family: Arial, Helvetica, sans-serif;
     color: #A5060B;
+    text-align: left;
 }
 
 .row {
