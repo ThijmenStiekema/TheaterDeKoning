@@ -61,6 +61,12 @@ namespace TheaterDeKoning.Controllers
             return View();
         }
 
+        [Route("Afhuren")]
+        public IActionResult Afhuren()
+        {
+            return View();
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
