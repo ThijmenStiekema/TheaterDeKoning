@@ -7,12 +7,26 @@
     height: 4em;
 }
 
+.topnav {
+    display: flex;
+    padding: 0;
+    flex-direction: row;
+    font-family: "Times New Roman", Times, serif;
+    background-color: #A5060B; /* rood*/
+    align-content: center;
+    overflow: hidden;
+    min-height: 5vh;
+    height: 4em;
+}
+
 .topnav a:active {
     text-shadow: 2px 2px #ffffff;
 }
 
 .Topleft {
     display: flex;
+    min-height: 5vh;
+    height: 4em;
     min-height: 5vh;
     height: 4em;
 }
@@ -26,12 +40,14 @@
     float: left;
 }
 
-h1 {
+.topnav h1 {
     text-align: center;
     margin: 0;
     margin-left: 5px;
     color: #D2C1B0; /*beige*/
     float: left;
+    min-height: 5vh;
+    height: 4em;
 }
 
 .icon {
@@ -49,6 +65,7 @@ h1 {
 
     .topnav.responsive {
         flex-direction: column;
+        height: fit-content;
     }
 
     .topnav.responsive h1{
@@ -70,8 +87,6 @@ h1 {
     .topnav.responsive a {
        display: flex; 
     }
-
-  
 }
 
 h2{
