@@ -7,6 +7,18 @@
     height: 4em;
 }
 
+.topnav {
+    display: flex;
+    padding: 0;
+    flex-direction: row;
+    font-family: "Times New Roman", Times, serif;
+    background-color: #A5060B; /* rood*/
+    height: fit-content;
+    text-align: center;
+    align-items: center;
+    overflow: hidden;
+}
+
 .topnav a:active {
     text-shadow: 2px 2px #ffffff;
 }
@@ -100,6 +112,7 @@ h2{
     background-color: #231F20; /* Grijs*/
     font-family: Arial, Helvetica, sans-serif;
     color: #A5060B;
+    text-align: left;
 }
 
 .row {

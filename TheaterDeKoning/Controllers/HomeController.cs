@@ -44,7 +44,7 @@ namespace TheaterDeKoning.Controllers
         }
 
         [Route("Privacy")]
-            public IActionResult Privacy()
+        public IActionResult Privacy()
         {
             return View();
         }
