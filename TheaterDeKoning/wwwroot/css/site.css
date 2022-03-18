@@ -152,6 +152,7 @@ body{
 .article{
     min-height: 100em;
     width: 75vw;
+    display: flex;
 }
 
 .R {

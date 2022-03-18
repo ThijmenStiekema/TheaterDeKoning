@@ -61,8 +61,8 @@ namespace TheaterDeKoning.Controllers
             return View();
         }
 
-        [Route("Afhuren")]
-        public IActionResult Afhuren()
+        [Route("theater-huren")]
+        public IActionResult theaterhuren()
         {
             return View();
         }
