@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using TheaterDeKoning.Models;
+using MySql.Data; 
 
 namespace TheaterDeKoning.Controllers
 {
@@ -43,8 +44,9 @@ namespace TheaterDeKoning.Controllers
             return View();
         }
 
-        [Route("Privacy")]
-        public IActionResult Privacy()
+        [Route("Calender")]
+        public IActionResult Calender()
+
         {
             return View();
         }

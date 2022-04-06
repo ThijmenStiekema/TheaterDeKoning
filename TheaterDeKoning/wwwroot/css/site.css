@@ -1,11 +1,11 @@
-﻿.topnav a {
+.topnav a {
     color: #D2C1B0; /*beige*/
     font-size: larger;
-    padding: 10px;
+    padding-left: 20px;
     text-decoration: none;
-    min-height: 5vh;
-    height: 4em;
     text-align: center;
+    justify-content: center;
+    vertical-align: middle;
 }
 
 .topnav {
@@ -15,7 +15,6 @@
     flex-direction: row;
     font-family: "Times New Roman", Times, serif;
     background-color: #A5060B; /* rood*/
-    align-content: center;
     overflow: hidden;
     min-height: 5vh;
     height: 4em;
@@ -48,9 +47,8 @@
     margin: 0;
     margin-left: 5px;
     color: #D2C1B0; /*beige*/
+    display: flex;
     float: left;
-    min-height: 5vh;
-    height: 4em;
     text-align: center;
 }
 
@@ -89,7 +87,10 @@
         align-self: flex-end;
     }
     .topnav.responsive a {
-       display: flex; 
+       display: flex;
+       height: 2em;
+       min-height:0;
+       padding: 0;
     }
 }
 
@@ -153,7 +154,7 @@ body{
 .article{
     min-height: 100em;
     width: 75vw;
-    display: flex;
+    /* display: flex; */
 }
 
 .R {
