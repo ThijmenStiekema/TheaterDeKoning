@@ -1,9 +1,16 @@
 ﻿@{
     ViewData["Title"] = "Calender";
 }
+
 <h1>@ViewData["Title"]</h1>
 
 <br>
 <p>Calender</p>
 <br />
 
+@model List<string>
+
+<div class="text-center">
+    <h1>Alle namen!</h1>
+    @foresch(string)
+</div>
