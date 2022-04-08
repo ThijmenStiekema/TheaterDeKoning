@@ -4,22 +4,22 @@ namespace TheaterDeKoning.Models
 {
     public class Person
     {
-        [Required(ErrorMessage = "Fill in your first name please")]
+        [Required(ErrorMessage = "Vul alstublieft uw voornaam in")]
         public string FirstName { get; set; }
-        [Required(ErrorMessage = "Fill in your last name please")]
+        [Required(ErrorMessage = "Vul alstublieft uw achternaam in")]
         public string Lastname { get; set; }
-        [EmailAddress(ErrorMessage = "Fill in your email adress please")]
+        [EmailAddress(ErrorMessage = "Vul alstublieft uw emailadres in")]
 
         [Required(ErrorMessage = "Fill in your email adress please")]
         public string Email { get; set; }
 
-        [Required(ErrorMessage = "Fill in your phone number please")]
+        [Required(ErrorMessage = "Vul alstublieft uw telefoonnummer in")]
         public string Phone { get; set; }
 
-        [Required(ErrorMessage = "Fill in your name adress please")]
+        [Required(ErrorMessage = "Vul alstublieft uw adres in")]
         public string Adress { get; set; }
         
-        [Required(ErrorMessage = "Fill in your description please")]
+        [Required(ErrorMessage = "Vul eventueel iets extra's in")]
         public string Description { get; set; }
         
     }

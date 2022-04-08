@@ -94,6 +94,14 @@
     }
 }
 
+div.a{
+    text-align: left;
+}
+
+div.b{
+text-align: center;
+}
+
 h2{
     font-size: 200%; 
     width: 100%;
