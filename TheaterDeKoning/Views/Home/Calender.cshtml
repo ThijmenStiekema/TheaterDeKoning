@@ -1,4 +1,5 @@
-﻿@{
+﻿@model List<string>
+@{
     ViewData["Title"] = "Calender";
 }
 
@@ -8,9 +9,10 @@
 <p>Calender</p>
 <br />
 
-@model List<string>
-
 <div class="text-center">
     <h1>Alle namen!</h1>
-    @foresch(string)
+    @foreach (string naam in Model)
+    {
+        <p>@naam</p>
+    }
 </div>

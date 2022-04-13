@@ -4,7 +4,8 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using TheaterDeKoning.Models;
-using MySql.Data; 
+using MySql.Data;
+using TheaterDeKoning.Database;
 
 namespace TheaterDeKoning.Controllers
 {

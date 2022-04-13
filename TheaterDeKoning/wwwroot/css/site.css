@@ -3,9 +3,9 @@
     font-size: larger;
     padding-left: 20px;
     text-decoration: none;
-    height: 100%;
-    margin: auto;
-    /* vertical-align: middle; */
+    vertical-align: middle;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 .topnav {
@@ -14,8 +14,9 @@
     font-family: "Times New Roman", Times, serif;
     background-color: #A5060B; /* rood*/
     overflow: hidden;
-    min-height: 5vh;
-    height: 4em;
+    height: 4em; 
+    display: flex;
+    justify-content: flex-start;
 }
 
 .topnav a:active {
@@ -30,20 +31,19 @@
 }
 
 .LogoHoek {
-    height: inherit;
-    margin: 0;
+    margin-top: auto;
+    margin-bottom: auto;
     object-fit: contain;
-    min-height: 5vh;
-    height: 4em;
     float: left;
+    height: 4em;
 }
 
 .topnav h1 {
-    vertical-align: middle;
-    height: 100%;
     margin-left: 5px;
     color: #D2C1B0; /*beige*/
     float: left;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 .icon {
@@ -80,13 +80,15 @@
     }
 
     .topnav.responsive .icon {
-        align-self: flex-end;
+        float: right;
+        height: 3em;
     }
     .topnav.responsive a {
        display: flex;
        height: 2em;
        min-height:0;
        padding: 0;
+       align-self: center;
     }
 }
 
