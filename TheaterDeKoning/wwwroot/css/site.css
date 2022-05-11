@@ -1,4 +1,4 @@
-topnav a {
+.topnav a {
     color: #D2C1B0; /*beige*/
     font-size: larger;
     padding-left: 20px;
@@ -14,14 +14,14 @@ topnav a {
     font-family: "Times New Roman", Times, serif;
     background-color: #A5060B; /* rood*/
     overflow: hidden;
-    height: 4em; 
+    height: 4em;
     display: flex;
     justify-content: flex-start;
 }
 
-.topnav a:active {
-    text-shadow: 2px 2px #ffffff;
-}
+    .topnav a:active {
+        text-shadow: 2px 2px #ffffff;
+    }
 
 .Topleft {
     height: 100%;
@@ -55,44 +55,43 @@ topnav a {
         display: none;
     }
 
-    .topnav a.icon {
-        display: block;
-    }
+        .topnav a.icon {
+            display: block;
+        }
 
     .topnav.responsive {
         flex-direction: column;
         height: fit-content;
         text-align: center;
-        display:flex;
+        display: flex;
     }
 
-    .topnav.responsive h1{
-    }
-  
-    .topnav.responsive.icon {
+        .topnav.responsive h1 {
+        }
+
+        .topnav.responsive.icon {
             flex-direction: row-reverse;
             display: block;
         }
 
-    .topnav.responsive .Topleft{
-        display: block;
-        float: left;
-    }
+        .topnav.responsive .Topleft {
+            display: block;
+            float: left;
+        }
 
-    .topnav.responsive .icon {
-        float: right;
-        height: 3em;
-    }
-    .topnav.responsive a {
-       display: flex;
-       height: 2em;
-       min-height:0;
-       padding: 0;
-       align-self: center;
-    }
+        .topnav.responsive .icon {
+            float: right;
+            height: 3em;
+        }
+
+        .topnav.responsive a {
+            display: flex;
+            height: 2em;
+            min-height: 0;
+            padding: 0;
+            align-self: center;
+        }
 }
-
-
 .content {
     margin: 0;
     display: flex;
