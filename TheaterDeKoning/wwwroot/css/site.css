@@ -102,10 +102,11 @@
 }
 
 .row {
-    content: "";
-    clear: both;
-    display: table;
+    display: flex;
+    font-size: 150%;
 }
+
+
 
 body{
     margin: 0;
