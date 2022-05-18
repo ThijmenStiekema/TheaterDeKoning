@@ -177,3 +177,16 @@ h3 {
     width: 300px;
     border-color: white;
 }
+
+.vraag {
+    background-color: #000000;
+    width: 500px;
+    border: 2px solid black;
+    margin: 50px;
+    padding: 20px;
+}
+
+.imagefaq {
+    width: 100%;
+    height: auto;
+}
