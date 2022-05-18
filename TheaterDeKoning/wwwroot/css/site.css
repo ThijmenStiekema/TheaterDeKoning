@@ -105,6 +105,7 @@
 .row {
     display: flex;
     font-size: 150%;
+    justify-content: center;
 }
 
 body{
@@ -116,8 +117,8 @@ body{
     padding: 0;
 }
 
-.article{
-    width: 75vw;
+.article {
+    /* width: 75vw; */
     /* display: flex; */
 }
 
@@ -138,32 +139,35 @@ footer {
 }
 h2 {
     font-size: 3em;
-    outline: 2px;
-    outline-color: #D2C1B0;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #D2C1B0;
+}
+
+.TitleTekst{
+    width: 50%;
 }
 
 .Image1 {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin-left: 500px;
-    float: right;
+    width: 400px;
+    height: 200px;
+    padding: 15px;
+}
+
+h3 {
+    font-size: 3em;
 }
 
 .flex-container {
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     background-color: #231F20;
     border: 25px;
+    height: 10vh;
 }
 
 .flex-contianer ::-webkit-scrollbar {
 
-}
-
-h3 {
-    font-size: 200%;
-    width: 100%;
 }
 
 .Poster_image {
