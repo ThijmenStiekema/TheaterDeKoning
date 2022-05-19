@@ -50,6 +50,158 @@
     display: none;
 }
 
+.content {
+    margin: 0;
+    display: flex;
+    background-color: #231F20; /* Grijs*/
+    font-family: Arial, Helvetica, sans-serif;
+    color: #A5060B;
+    min-height: 100vh;
+}
+
+body{
+    margin: 0;
+}
+
+.article {
+    margin-left: 12.5vw;
+    margin-right: 12.5vw;
+}
+
+p {
+    color: #969696;
+}
+
+footer {
+    height: 1.5em;
+    background-color: #A5060B;
+    font-family: "Times New Roman", Times, serif;
+    color: white;
+    text-align: center;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+h2 {
+    font-size: 3em;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #D2C1B0;
+}
+
+/*Homepage*/
+.row {
+    display: flex;
+    font-size: 175%;
+    justify-content: center;
+    margin-top: 30px;
+    background: radial-gradient( rgba(255,255,255,1) 0%, rgba(55,55,55,1) 0%, rgba(35,31,32,1) 65%);
+}
+
+.TitleTekst{
+    max-width: 30%
+}
+
+.Image1 {
+    object-fit: contain;
+    width: 40vw;
+    min-width: 600px;
+}
+
+@media screen and (max-width: 1650px) {
+    .row {
+        margin-top: 15px;
+        font-size: 150%;
+    }
+
+    .Image1 {
+        min-width: 500px;
+    }
+
+    .TitleTekst {
+        max-width: 40%
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .row {
+        margin-top: 10px;
+        font-size: 125%;
+    }
+
+    .Image1 {
+        min-width: 400px;
+    }
+
+    .TitleTekst {
+        max-width: 45%
+    }
+}
+
+h3 {
+    font-size: 2em;
+}
+
+h4 {
+    font-size: 2em;
+    color: #D2C1B0;
+    text-align: center;
+}
+
+p2{
+    color: white;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    height: auto;
+    -webkit-overflow-scrolling: touch;
+    width: 90vw;
+    white-space: nowrap;
+
+    text-align: center;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+.Poster_image {
+    width: 225px;
+    height: 340px;
+    display: block;
+    object-fit: cover;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+}
+
+.poster {
+    width: 250px;
+    height: 400px;
+    background-color: black;
+    flex: 0 0 auto;
+
+    margin-left: 20px;
+}
+
+
+.vraag {
+    background-color: #000000;
+    width: 500px;
+    border: 2px solid black;
+    margin: 50px;
+    padding: 20px;
+}
+
+.imagefaq {
+    width: 100%;
+    height: auto;
+}
+
+
+
 @media screen and (max-width: 1000px) {
     .topnav a {
         display: none;
@@ -57,6 +209,7 @@
 
         .topnav a.icon {
             display: block;
+            padding-right: 15px;
         }
 
     .topnav.responsive {
@@ -91,106 +244,27 @@
             padding: 0;
             align-self: center;
         }
+
+    .Image1 {
+        display: none;
+    }
+
+    .TitleTekst {
+        min-width: 90vw;
+        width: 90%;
+    }
+
+    .row {
+        background: none;
+    }
 }
 
-.content {
-    margin: 0;
-    display: flex;
-    background-color: #231F20; /* Grijs*/
-    font-family: Arial, Helvetica, sans-serif;
-    color: #A5060B;
-    min-height: 100em;
-}
+@media screen and (max-width:500px) {
+    .LogoHoek {
+       display: none;
+    }
 
-.row {
-    display: flex;
-    font-size: 150%;
-    justify-content: center;
-}
-
-body{
-    margin: 0;
-}
-
-.L {
-    width: 12.5vw;
-    padding: 0;
-}
-
-.article {
-    /* width: 75vw; */
-    /* display: flex; */
-}
-
-.R {
-    width: 12.5vw;
-}
-
-p {
-    color: #969696;
-}
-
-footer {
-    background-color: #A5060B; 
-}
-
-* {
-    box-sizing: border-box;
-}
-h2 {
-    font-size: 3em;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: #D2C1B0;
-}
-
-.TitleTekst{
-    width: 50%;
-}
-
-.Image1 {
-    width: 400px;
-    height: 200px;
-    padding: 15px;
-}
-
-h3 {
-    font-size: 3em;
-}
-
-.flex-container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    background-color: #231F20;
-    border: 25px;
-    height: 10vh;
-}
-
-.flex-contianer ::-webkit-scrollbar {
-
-}
-
-.Poster_image {
-    height: auto;
-    display: block;
-    margin-left: 500px;
-    float: right;
-}
-
-.Poster {
-    width: 300px;
-    border-color: white;
-}
-
-.vraag {
-    background-color: #000000;
-    width: 500px;
-    border: 2px solid black;
-    margin: 50px;
-    padding: 20px;
-}
-
-.imagefaq {
-    width: 100%;
-    height: auto;
+    .topnav h1{
+        font-size: 7.5vw;
+    }
 }
