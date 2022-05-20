@@ -83,6 +83,12 @@ namespace TheaterDeKoning.Controllers
             return View();
         }
 
+        [Route("voorstelling")]
+        public IActionResult voorstelling()
+        {
+            return View();
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
