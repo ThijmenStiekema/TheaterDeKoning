@@ -149,6 +149,12 @@ h4 {
     text-align: center;
 }
 
+h5 {
+    padding: 0px;
+    color: white;
+    font-size: 2em;
+}
+
 p2{
     color: white;
 }
@@ -182,7 +188,6 @@ p2{
     height: 400px;
     background-color: black;
     flex: 0 0 auto;
-
     margin-left: 20px;
 }
 
@@ -200,6 +205,18 @@ p2{
     height: auto;
 }
 
+.inhuren {
+    background-color: #A5060B;
+    width: 500px;
+    border: 2px solid black;
+    margin: 50px;
+    padding: 20px;
+}
+
+p.solid {
+    border-style: solid;
+    color: white
+}
 
 
 @media screen and (max-width: 1000px) {
