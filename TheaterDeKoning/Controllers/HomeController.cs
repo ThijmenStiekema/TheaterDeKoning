@@ -6,6 +6,7 @@ using System.Diagnostics;
 using TheaterDeKoning.Models;
 using MySql.Data;
 using TheaterDeKoning.Database;
+using TheaterDeKoning.DataBase;
 
 namespace TheaterDeKoning.Controllers
 {
@@ -42,27 +43,17 @@ namespace TheaterDeKoning.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            var voorstellingen = GetAllVoorstellingen();
+            return View(voorstellingen);
         }
 
         [Route("Calender")]
         public IActionResult Calender()
 
         {
-            // alle producten ophalen
-            var rows = DatabaseConnector.GetRows("select * from product");
-
-            // lijst maken om alle namen in te stoppen
-            List<string> names = new List<string>();
-
-            foreach (var row in rows)
-            {
-                // elke naam toevoegen aan de lijst met namen
-                names.Add(row["naam"].ToString());
-            }
-
-            // de lijst met namen in de html stoppen
-            return View(names);
+            //var Voorstellingen = GetAllVoorstellingen();
+            //return View(Voorstellingen);
+            return View(); 
         }
 
         [Route("FAQ")]
@@ -87,6 +78,29 @@ namespace TheaterDeKoning.Controllers
         public IActionResult voorstelling()
         {
             return View();
+        }
+
+        public List<Voorstelling> GetAllVoorstellingen()
+        {
+            // alle producten ophalen uit de database
+            var rows = DatabaseConnector.GetRows("select * from voorstelling");
+
+            // lijst maken om alle producten in te stoppen
+            List<Voorstelling> voorstellingen = new List<Voorstelling>();
+
+            foreach (var row in rows)
+            {
+                // Voor elke rij maken we nu een product
+                Voorstelling p = new Voorstelling();
+                p.id = Convert.ToInt32(row["id"]);
+                p.datum = row["datum"].ToString();
+                p.Tijdvak = Convert.ToInt32(row["Tijdvak"]);
+
+                // en dat product voegen we toe aan de lijst met producten
+                voorstellingen.Add(p);
+            }
+
+            return voorstellingen;
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

@@ -1,4 +1,6 @@
-﻿@{
+﻿@using TheaterDeKoning.Database
+model List<voorstellingen>
+@{
     ViewData["Title"] = "Home Page";
 }
 
@@ -18,13 +20,18 @@
 
 <h4> Opkomende Voorstellingen</h4>
 <div class="flex-container">
+    @foreach (var Voorstelling in Model)
+    {<div class="poster">
+        @Voorstelling.naam
+        </div>  }
+
     <div class="poster">
-        <img class="Poster_image" src="~/Images/Lion King image.png" />
+        <img class="Poster_image" src="~/Images/LionKing.png" />
         <p2>The Lion King</p2>
     </div>
 
     <div class="poster">
-        <img class="Poster_image" src="~/Images/Titanic image.png" />
+        <img class="Poster_image" src="~/Images/Titanic.png" />
     </div>
 
     <div class="poster">
