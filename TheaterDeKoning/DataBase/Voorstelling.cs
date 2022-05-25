@@ -9,8 +9,8 @@ namespace TheaterDeKoning.DataBase
     {
         public int id { get; set; }
 
+        public string naam { get; set; }
         public string datum { get; set; }
-
         public int Tijdvak { get; set; }
     }
 }

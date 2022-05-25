@@ -83,7 +83,7 @@ namespace TheaterDeKoning.Controllers
         public List<Voorstelling> GetAllVoorstellingen()
         {
             // alle producten ophalen uit de database
-            var rows = DatabaseConnector.GetRows("select * from voorstelling");
+            var rows = DatabaseConnector.GetRows("select * from voorstelling INNER JOIN naam_voorstelling ON voorstelling.naam_id = naam_voorstelling.id");
 
             // lijst maken om alle producten in te stoppen
             List<Voorstelling> voorstellingen = new List<Voorstelling>();
@@ -93,6 +93,7 @@ namespace TheaterDeKoning.Controllers
                 // Voor elke rij maken we nu een product
                 Voorstelling p = new Voorstelling();
                 p.id = Convert.ToInt32(row["id"]);
+                p.naam = row["naam"].ToString();
                 p.datum = row["datum"].ToString();
                 p.Tijdvak = Convert.ToInt32(row["Tijdvak"]);
 
