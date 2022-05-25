@@ -1,5 +1,5 @@
 ﻿@using TheaterDeKoning.Database
-model List<voorstellingen>
+
 @{
     ViewData["Title"] = "Home Page";
 }
@@ -22,7 +22,7 @@ model List<voorstellingen>
 <div class="flex-container">
     @foreach (var Voorstelling in Model)
     {<div class="poster">
-        @Voorstelling.naam
+        
         </div>  }
 
     <div class="poster">

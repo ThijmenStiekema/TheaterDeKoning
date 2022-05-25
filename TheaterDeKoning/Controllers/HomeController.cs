@@ -14,7 +14,28 @@ namespace TheaterDeKoning.Controllers
     {
         private readonly ILogger<HomeController> _logger;
 
-       
+        public List<Voorstelling> GetAllVoorstellingen()
+        {
+            // alle producten ophalen uit de database
+            var rows = DatabaseConnector.GetRows("select * from voorstelling");
+
+            // lijst maken om alle producten in te stoppen
+            List<Voorstelling> voorstellingen = new List<Voorstelling>();
+
+            foreach (var row in rows)
+            {
+                // Voor elke rij maken we nu een product
+                Voorstelling p = new Voorstelling();
+                p.id = Convert.ToInt32(row["id"]);
+                p.datum = row["datum"].ToString();
+                p.Tijdvak = Convert.ToInt32(row["Tijdvak"]);
+
+                // en dat product voegen we toe aan de lijst met producten
+                voorstellingen.Add(p);
+            }
+
+            return voorstellingen;
+        }
 
         public HomeController(ILogger<HomeController> logger)
         {
@@ -80,28 +101,7 @@ namespace TheaterDeKoning.Controllers
             return View();
         }
 
-        public List<Voorstelling> GetAllVoorstellingen()
-        {
-            // alle producten ophalen uit de database
-            var rows = DatabaseConnector.GetRows("select * from voorstelling");
 
-            // lijst maken om alle producten in te stoppen
-            List<Voorstelling> voorstellingen = new List<Voorstelling>();
-
-            foreach (var row in rows)
-            {
-                // Voor elke rij maken we nu een product
-                Voorstelling p = new Voorstelling();
-                p.id = Convert.ToInt32(row["id"]);
-                p.datum = row["datum"].ToString();
-                p.Tijdvak = Convert.ToInt32(row["Tijdvak"]);
-
-                // en dat product voegen we toe aan de lijst met producten
-                voorstellingen.Add(p);
-            }
-
-            return voorstellingen;
-        }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
