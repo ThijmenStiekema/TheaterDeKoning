@@ -147,6 +147,8 @@ h4 {
     font-size: 2em;
     color: #D2C1B0;
     text-align: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
 }
 
 h5 {
@@ -164,14 +166,34 @@ p2{
     flex-wrap: nowrap;
     overflow-x: scroll;
     height: auto;
-    -webkit-overflow-scrolling: touch;
+    padding: 20px;
     width: 90vw;
     white-space: nowrap;
-
     text-align: center;
     margin: auto;
     margin-bottom: 10px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-color: dark;
 }
+
+.flex-container::-webkit-scrollbar {
+    height: 10px;
+}
+
+.flex-container::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 2px grey;
+    border-radius: 10px;
+}
+
+.flex-container::-webkit-scrollbar-thumb {
+    background: rgb(7, 7, 7);
+    border-radius: 10px;
+}
+
+    .flex-container::-webkit-scrollbar-thumb:hover {
+        background: grey;
+    }
+
 
 .Poster_image {
     width: 225px;

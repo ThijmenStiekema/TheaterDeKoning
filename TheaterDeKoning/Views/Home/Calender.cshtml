@@ -1,4 +1,6 @@
-﻿@model List<string>
+﻿@using TheaterDeKoning.DataBase
+
+@model List<Voorstelling>
 @{
     ViewData["Title"] = "Calender";
 }
@@ -11,5 +13,9 @@
 
 <div class="text-center">
     <h1>Alle namen!</h1>
-
+    @foreach (var Voorstelling in Model)
+    {
+        @Voorstelling.naam @Voorstelling.datum @Voorstelling.Tijdvak @Voorstelling.Zaal @Voorstelling.beschrijving
+        <br />
+    }
 </div>

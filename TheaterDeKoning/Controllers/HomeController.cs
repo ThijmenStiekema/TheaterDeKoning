@@ -51,9 +51,8 @@ namespace TheaterDeKoning.Controllers
         public IActionResult Calender()
 
         {
-            //var Voorstellingen = GetAllVoorstellingen();
-            //return View(Voorstellingen);
-            return View(); 
+            var voorstellingen = GetAllVoorstellingen();
+            return View(voorstellingen);
         }
 
         [Route("FAQ")]
@@ -83,7 +82,7 @@ namespace TheaterDeKoning.Controllers
         public List<Voorstelling> GetAllVoorstellingen()
         {
             // alle producten ophalen uit de database
-            var rows = DatabaseConnector.GetRows("select * from voorstelling INNER JOIN naam_voorstelling ON voorstelling.naam_id = naam_voorstelling.id");
+            var rows = DatabaseConnector.GetRows("select * from voorstelling INNER JOIN naam_voorstelling ON voorstelling.naam_id = naam_voorstelling.id ORDER BY `voorstelling`.`id` ASC");
 
             // lijst maken om alle producten in te stoppen
             List<Voorstelling> voorstellingen = new List<Voorstelling>();
@@ -94,8 +93,11 @@ namespace TheaterDeKoning.Controllers
                 Voorstelling p = new Voorstelling();
                 p.id = Convert.ToInt32(row["id"]);
                 p.naam = row["naam"].ToString();
-                p.datum = row["datum"].ToString();
-                p.Tijdvak = Convert.ToInt32(row["Tijdvak"]);
+                p.datum = row["datum"].ToString().Split()[0];
+                p.Tijdvak= row["Tijdvak"].ToString();
+                p.Zaal = Convert.ToInt32(row["Zaal"]);
+                p.beschrijving = row["beschrijving"].ToString();
+                p.Poster = row["Poster"].ToString();
 
                 // en dat product voegen we toe aan de lijst met producten
                 voorstellingen.Add(p);

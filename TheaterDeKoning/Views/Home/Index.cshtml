@@ -20,27 +20,19 @@
 </div>
 
 <h4> Opkomende Voorstellingen</h4>
-<div class="flex-container">
-    @foreach (var Voorstelling in Model)
+<div class="flex-container" id="yourDiv">
+    @foreach (var Voorstelling in Model.Take(14))
     {<div class="poster">
+        <img class="Poster_image" src="~/Images/@Voorstelling.Poster " />
         <a>
             @Voorstelling.naam
         </a>
-
-        @Voorstelling.datum;
-
-        <p id="Tijdvak">@Voorstelling.Tijdvak</p>
+        <br>
+        <p>
+         @Voorstelling.datum     
+         </p>
         </div>  
     }
-
-    <div class="poster">
-        <img class="Poster_image" src="~/Images/LionKing.png" />
-        <p2>The Lion King</p2>
-    </div>
-
-    <div class="poster">
-        <img class="Poster_image" src="~/Images/Titanic.png" />
-    </div>
 
 </div>
 
@@ -52,9 +44,21 @@
 </style>
 
 <script>
-    const element = document.getElementById("Tijdvak");
-    if (element.innerHTML = "1")
-    {element.innerHTML = "18:00 - 21:00";}
-    else
-    {element.innerHTML = "22:00 - 24:00";}
-</script> 
+(function() {
+    function scrollHorizontally(e) {
+        e = window.event || e;
+        var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
+        document.getElementById('yourDiv').scrollLeft -= (delta * 75); // Multiplied by 40
+        e.preventDefault();
+    }
+    if (document.getElementById('yourDiv').addEventListener) {
+        // IE9, Chrome, Safari, Opera
+        document.getElementById('yourDiv').addEventListener('mousewheel', scrollHorizontally, false);
+        // Firefox
+        document.getElementById('yourDiv').addEventListener('DOMMouseScroll', scrollHorizontally, false);
+    } else {
+        // IE 6/7/8
+        document.getElementById('yourDiv').attachEvent('onmousewheel', scrollHorizontally);
+    }
+})();
+</script>
