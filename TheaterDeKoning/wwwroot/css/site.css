@@ -157,6 +157,11 @@ h5 {
     font-size: 2em;
 }
 
+h6{
+    font-size: 2em;
+    color: white;
+}
+
 p2{
     color: white;
 }
@@ -225,6 +230,7 @@ p2{
 .imagefaq {
     width: 100%;
     height: auto;
+    border-radius: 50%;
 }
 
 .inhuren {
@@ -233,7 +239,31 @@ p2{
     border: 2px solid black;
     margin: 50px;
     padding: 20px;
+    border-radius: 15px;
 }
+
+.inhuren p{
+    color: white;
+    font-size: 200%;
+}
+
+.vacature {
+    background-color: #D2C1B0;
+    width: 500px;
+    border: 2px solid white;
+    margin: 50px;
+    padding: 20px;
+    border-radius: 15px;
+}
+ .vacature p {
+    color: black;
+    font-size: 200%;
+ }
+
+ .vacature p2{
+     color: black;
+     font-style: oblique;
+ }
 
 p.solid {
     border-style: solid;
@@ -319,6 +349,12 @@ p.solid {
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
+}
+
+.button1 {
+    background-color: #A5060B;
+    color: black;
+    border-radius: 15px;
 }
 
 .vacatures {
