@@ -84,10 +84,16 @@ footer {
     box-sizing: border-box;
 }
 
-h2 {
+h1 {
+    font-size: 2em;
+    color: #D2C1B0;
+}
+
+#MainH {
     font-size: 3em;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: #D2C1B0;
+    color: #A5060B;
 }
 
 /*Homepage*/

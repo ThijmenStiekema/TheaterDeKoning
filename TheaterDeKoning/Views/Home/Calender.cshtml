@@ -6,13 +6,8 @@
 }
 
 <h1>@ViewData["Title"]</h1>
-
-<br>
-<p>Calender</p>
 <br />
-
 <div class="text-center">
-    <h1>Alle namen!</h1>
     @foreach (var Voorstelling in Model)
     {
         @Voorstelling.naam @Voorstelling.datum @Voorstelling.Tijdvak @Voorstelling.Zaal @Voorstelling.beschrijving

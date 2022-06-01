@@ -8,6 +8,7 @@ namespace TheaterDeKoning.DataBase
     public class Voorstelling
     {
         public int id { get; set; }
+        public int naam_id { get; set; }
         public string naam { get; set; }
         public string datum { get; set; }
         public string Tijdvak { get; set; }

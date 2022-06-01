@@ -73,10 +73,11 @@ namespace TheaterDeKoning.Controllers
             return View();
         }
 
-        [Route("voorstelling")]
-        public IActionResult voorstelling()
+        [Route("voorstelling/{naam_id}")]
+        public IActionResult voorstelling(int naam_id)
         {
-            return View();
+            var voorstelling = GetVoorstelling(naam_id);
+            return View(voorstelling);
         }
 
         public List<Voorstelling> GetAllVoorstellingen()
@@ -92,9 +93,38 @@ namespace TheaterDeKoning.Controllers
                 // Voor elke rij maken we nu een product
                 Voorstelling p = new Voorstelling();
                 p.id = Convert.ToInt32(row["id"]);
+                p.naam_id = Convert.ToInt32(row["naam_id"]);
                 p.naam = row["naam"].ToString();
                 p.datum = row["datum"].ToString().Split()[0];
                 p.Tijdvak= row["Tijdvak"].ToString();
+                p.Zaal = Convert.ToInt32(row["Zaal"]);
+                p.beschrijving = row["beschrijving"].ToString();
+                p.Poster = row["Poster"].ToString();
+
+                // en dat product voegen we toe aan de lijst met producten
+                voorstellingen.Add(p);
+            }
+
+            return voorstellingen;
+        }
+
+        public List<Voorstelling> GetVoorstelling(int naam_id)
+        {
+            // alle producten ophalen uit de database
+            var rows = DatabaseConnector.GetRows("select * from voorstelling INNER JOIN naam_voorstelling ON voorstelling.naam_id = naam_voorstelling.id WHERE naam_id = {naam_id}");
+
+            // lijst maken om alle producten in te stoppen
+            List<Voorstelling> voorstellingen = new List<Voorstelling>();
+
+            foreach (var row in rows)
+            {
+                // Voor elke rij maken we nu een product
+                Voorstelling p = new Voorstelling();
+                p.id = Convert.ToInt32(row["id"]);
+                p.naam_id = Convert.ToInt32(row["naam_id"]);
+                p.naam = row["naam"].ToString();
+                p.datum = row["datum"].ToString().Split()[0];
+                p.Tijdvak = row["Tijdvak"].ToString();
                 p.Zaal = Convert.ToInt32(row["Zaal"]);
                 p.beschrijving = row["beschrijving"].ToString();
                 p.Poster = row["Poster"].ToString();

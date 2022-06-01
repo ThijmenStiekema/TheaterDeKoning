@@ -7,7 +7,7 @@
 
 <div class="row">
     <div class="TitleTekst">
-        <h2>Bij Theater de Koning is het altijd gezellig</h2>
+        <h1 id="MainH">Bij Theater de Koning is het altijd gezellig</h1>
         <p>
             Welkom bij onze theater website.
             Receptie open tussen:
@@ -23,13 +23,13 @@
 <div class="flex-container" id="yourDiv">
     @foreach (var Voorstelling in Model.Take(14))
     {<div class="poster">
-        <img class="Poster_image" src="~/Images/@Voorstelling.Poster " />
+        <img class="Poster_image" src="~/Images/@Voorstelling.Poster" />
         <a>
             @Voorstelling.naam
         </a>
         <br>
         <p>
-         @Voorstelling.datum     
+         @Voorstelling.datum  @Voorstelling.Tijdvak
          </p>
         </div>  
     }
