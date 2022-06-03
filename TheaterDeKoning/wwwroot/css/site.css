@@ -390,3 +390,16 @@ p.solid {
     overflow: hidden;
     background-color: #f1f1f1;
 }
+
+.Detail_back {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    height: 600px;
+    flex-direction: row;
+}
+
+.Detail_poster {
+    width:40%;
+    object-fit: cover;
+}

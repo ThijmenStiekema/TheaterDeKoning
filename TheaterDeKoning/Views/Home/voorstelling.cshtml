@@ -4,8 +4,12 @@
     ViewData["Title"] = Model.naam;
 }
 
-<div class="detail-black">
+<div class="detail-back">
+
+<div>
 <h1>@Model.naam</h1>
 <p> @Model.beschrijving</p>
-<img class="Detail_poster_image" src="~/Images/@Model.Poster" />
+</div>
+
+<img class="Detail_poster" src="~/Images/@Model.Poster" />
 </div>
