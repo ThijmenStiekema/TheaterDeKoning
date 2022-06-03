@@ -1,3 +1,11 @@
 ﻿@using TheaterDeKoning.DataBase
+@model Voorstelling
+@{
+    ViewData["Title"] = Model.naam;
+}
 
-@model List<Voorstelling>
+<div class="detail-black">
+<h1>@Model.naam</h1>
+<p> @Model.beschrijving</p>
+<img class="Detail_poster_image" src="~/Images/@Model.Poster" />
+</div>

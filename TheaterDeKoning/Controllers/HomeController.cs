@@ -108,10 +108,10 @@ namespace TheaterDeKoning.Controllers
             return voorstellingen;
         }
 
-        public List<Voorstelling> GetVoorstelling(int naam_id)
+        public Voorstelling GetVoorstelling(int naam_id)
         {
             // alle producten ophalen uit de database
-            var rows = DatabaseConnector.GetRows("select * from voorstelling INNER JOIN naam_voorstelling ON voorstelling.naam_id = naam_voorstelling.id WHERE naam_id = {naam_id}");
+            var rows = DatabaseConnector.GetRows($"select * from voorstelling INNER JOIN naam_voorstelling ON voorstelling.naam_id = naam_voorstelling.id WHERE naam_id = {naam_id}");
 
             // lijst maken om alle producten in te stoppen
             List<Voorstelling> voorstellingen = new List<Voorstelling>();
@@ -133,7 +133,7 @@ namespace TheaterDeKoning.Controllers
                 voorstellingen.Add(p);
             }
 
-            return voorstellingen;
+            return voorstellingen[0];
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
