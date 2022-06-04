@@ -76,8 +76,14 @@ namespace TheaterDeKoning.Controllers
         [Route("voorstelling/{naam_id}")]
         public IActionResult voorstelling(int naam_id)
         {
-            var voorstelling = GetVoorstelling(naam_id);
-            return View(voorstelling);
+            List<Voorstelling> voorstellingen = GetAllVoorstellingen();
+            List<Voorstelling> optredens = new List<Voorstelling>();
+            foreach (var voorstelling in voorstellingen)
+            {
+                if (voorstelling.naam_id == naam_id)
+                {optredens.Add(voorstelling);}
+            }
+            return View(optredens);
         }
 
         public List<Voorstelling> GetAllVoorstellingen()

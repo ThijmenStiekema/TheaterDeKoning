@@ -1,15 +1,33 @@
 ﻿@using TheaterDeKoning.DataBase
-@model Voorstelling
+@model List<Voorstelling>
 @{
-    ViewData["Title"] = Model.naam;
+    ViewData["Title"] = @Model[0].naam;
 }
 
-<div class="detail-back">
+<div class="detail-container">
 
-<div>
-<h1>@Model.naam</h1>
-<p> @Model.beschrijving</p>
+    <div>
+        <div class="detail-text">
+            <h1> @Model[0].naam</h1>
+            <p2> @Model[0].beschrijving</p2>
+        </div>
+        @foreach (var Voorstelling in Model)
+        { 
+            <div class="Bookbox"> 
+            <button id="Book"> Book </button>
+            <p2> Datum: @Voorstelling.datum   Tijd: @Voorstelling.Tijdvak   Zaal: @Voorstelling.Zaal</p2>
+            </div> 
+        }
+    </div>
+    <img id="Poster" class="Detail_poster" src="~/Images/@Model[0].Poster" />
 </div>
 
-<img class="Detail_poster" src="~/Images/@Model.Poster" />
-</div>
+@foreach (var Voorstelling in Model)
+        { 
+            <div class="Bookbox2"> 
+            <button id="Book"> Book </button>
+            <p2> Datum: @Voorstelling.datum   Tijd: @Voorstelling.Tijdvak   Zaal: @Voorstelling.Zaal</p2>
+            </div> 
+        }
+
+<img id="Poster2" class="Detail_poster" src="~/Images/@Model[0].Poster" /> 

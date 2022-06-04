@@ -9,8 +9,10 @@
     <div class="TitleTekst">
         <h1 id="MainH">Bij Theater de Koning is het altijd gezellig</h1>
         <p>
-            Welkom bij onze theater website.
-            Locatie:
+            Welkom bij onze theater website. 
+            <br />
+            Receptie open tussen 15:00 - 24:00
+            <br />
             Beatrixstraat 82 2220WA
         </p>
     </div>
@@ -20,16 +22,17 @@
 <h4> Opkomende Voorstellingen</h4>
 <div class="flex-container" id="yourDiv">
     @foreach (var Voorstelling in Model.Take(14))
-    {<div class="poster">
-        <img class="Poster_image" src="~/Images/@Voorstelling.Poster" />
-        <a>
+    {
+    <a href="voorstelling/@Voorstelling.naam_id">
+        <div class="poster">
+            <img class="Poster_image" src="~/Images/@Voorstelling.Poster" />
+            <p>
             @Voorstelling.naam
-        </a>
-        <br>
-        <p>
-         @Voorstelling.datum  @Voorstelling.Tijdvak
-         </p>
+            <br>
+            @Voorstelling.datum  @Voorstelling.Tijdvak
+            </p>
         </div>  
+    </a>
     }
 
 </div>
