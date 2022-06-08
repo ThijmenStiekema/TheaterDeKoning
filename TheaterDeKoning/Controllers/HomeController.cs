@@ -48,10 +48,11 @@ namespace TheaterDeKoning.Controllers
         }
 
         [Route("Calender")]
-        public IActionResult Calender()
-
+        public IActionResult Calender(string week)
         {
+            
             var voorstellingen = GetAllVoorstellingen();
+
             return View(voorstellingen);
         }
 
@@ -89,7 +90,7 @@ namespace TheaterDeKoning.Controllers
         public List<Voorstelling> GetAllVoorstellingen()
         {
             // alle producten ophalen uit de database
-            var rows = DatabaseConnector.GetRows("select * from voorstelling INNER JOIN naam_voorstelling ON voorstelling.naam_id = naam_voorstelling.id ORDER BY `voorstelling`.`id` ASC");
+            var rows = DatabaseConnector.GetRows("select * , WEEK(datum) from voorstelling INNER JOIN naam_voorstelling ON voorstelling.naam_id = naam_voorstelling.id ORDER BY `voorstelling`.`id` ASC");
 
             // lijst maken om alle producten in te stoppen
             List<Voorstelling> voorstellingen = new List<Voorstelling>();
