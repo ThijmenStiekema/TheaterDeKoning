@@ -1,16 +1,17 @@
 ﻿using MySql.Data.MySqlClient;
+using TheaterDeKoning.Models;
 using System.Collections.Generic;
 
 namespace TheaterDeKoning.Database
 {
     public static class DatabaseConnector
     {
+        // stel in waar de database gevonden kan worden
+        //string connectionString = "Server=informatica.st-maartenscollege.nl;Port=3306;Database=110813;Uid=110813;Pwd=inf2122sql;";
+        public static string connectionString = "Server=172.16.160.21;Port=3306;Database=110813;Uid=110813;Pwd=inf2122sql;";
 
         public static List<Dictionary<string, object>> GetRows(string query)
-        {
-            // stel in waar de database gevonden kan worden
-            string connectionString = "Server=informatica.st-maartenscollege.nl;Port=3306;Database=110813;Uid=110813;Pwd=inf2122sql;";
-            //string connectionString = "Server=172.16.160.21;Port=3306;Database=110813;Uid=110813;Pwd=inf2122sql;";
+        {           
 
             // maak een lege lijst waar we de namen in gaan opslaan
             List<Dictionary<string, object>> rows = new List<Dictionary<string, object>>();
@@ -49,7 +50,20 @@ namespace TheaterDeKoning.Database
             // return de lijst met namen
             return rows;
         }
+        public static void SavePerson(Person person)
+        {
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            {
+                conn.Open();
+                MySqlCommand cmd = new MySqlCommand("INSERT INTO klantopslaan(voornaam, achternaam, email, bericht) VALUES(?voornaam, ?achternaam, ?email, ?bericht)", conn);
 
+                // Elke parameter moet je handmatig toevoegen aan de query
+                cmd.Parameters.Add("?voornaam", MySqlDbType.Text).Value = person.FirstName;
+                cmd.Parameters.Add("?achternaam", MySqlDbType.Text).Value = person.Lastname;
+                cmd.Parameters.Add("?email", MySqlDbType.Text).Value = person.Email;
+                cmd.Parameters.Add("?bericht", MySqlDbType.Text).Value = person.Description;
+                cmd.ExecuteNonQuery();
+            }
+        }
     }
 }
-

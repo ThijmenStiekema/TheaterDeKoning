@@ -6,19 +6,41 @@
 <h1>@ViewData["Title"]</h1>
 
 <form method="post">
-    @Html.LabelFor(m => m.FirstName)
-    @Html.TextBoxFor(m => m.FirstName)
-    @Html.ValidationMessageFor(m => m.FirstName)
-    <div>Lastname: <input type="text" name="lastname" /></div>
-    @Html.ValidationMessageFor(m => m.Lastname)
-    <div>E-mail: <input type="text" name="email" /></div>
-    @Html.ValidationMessageFor(m => m.Email)
-    <div>Phone: <input type="text" name="phone" /></div>
-    @Html.ValidationMessageFor(m => m.Phone)
-    <div>Adress: <input type="text" name="adress" /></div>
-    @Html.ValidationMessageFor(m => m.Adress)
-    <div>Description: <input type="text" name="adress" /></div>
-    @Html.ValidationMessageFor(m => m.Description)
+    <div>
+        @Html.LabelFor(m => m.FirstName)
+        @Html.TextBoxFor(m => m.FirstName)
+        @Html.ValidationMessageFor(m => m.FirstName)
+    </div>
 
-    <input type="submit" value="verstuur" />
+    <div>
+        @Html.LabelFor(m => m.Lastname)
+        @Html.TextBoxFor(m => m.Lastname)
+        @Html.ValidationMessageFor(m => m.Lastname)
+    </div>
+
+    <div>
+        @Html.LabelFor(m => m.Email)
+        @Html.TextBoxFor(m => m.Email)
+        @Html.ValidationMessageFor(m => m.Email)
+    </div>
+
+    <div>
+        @Html.LabelFor(m => m.Phone)
+        @Html.TextBoxFor(m => m.Phone)
+        @Html.ValidationMessageFor(m => m.Phone)
+    </div>
+
+    <div>
+        @Html.LabelFor(m => m.Adress)
+        @Html.TextBoxFor(m => m.Adress)
+        @Html.ValidationMessageFor(m => m.Adress)
+    </div>
+
+    <div>
+        @Html.LabelFor(m => m.Description)
+        @Html.TextBoxFor(m => m.Description)
+        @Html.ValidationMessageFor(m => m.Description)
+    </div>
+
+    <input type="submit" value="verstuur"/>
 </form>

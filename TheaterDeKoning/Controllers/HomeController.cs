@@ -33,10 +33,12 @@ namespace TheaterDeKoning.Controllers
         [Route("Contact")]
         public IActionResult Contact(Person person)
         {
-            ViewData["firstName"] = person.FirstName;
-            ViewData["lastName"] = person.Lastname;
-            if (ModelState.IsValid)
+            if (ModelState.IsValid) { 
+                
+                DatabaseConnector.SavePerson(person);
+                
                 return Redirect("/succes");
+            }
 
             return View(person);
         }
