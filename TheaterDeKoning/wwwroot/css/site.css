@@ -499,3 +499,28 @@ p.solid {
         margin-bottom: 20px;
     }
 }
+
+.fa {
+    padding: 0px;
+    font-size: 15px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    float: right;
+    align-self: center;
+}
+
+.fa-instagram {
+    background: #A5060B;
+    color: white;
+}
+
+.fa-facebook {
+    background: #A5060B;
+    color: white;
+}
+
+.fa-twitter {
+    background: #A5060B;
+    color: white;
+}
